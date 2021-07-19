@@ -15,7 +15,7 @@ export const Navbar: React.FC<PropsType> = ({logoutHandler}) => {
                     <li><Link to='/balance'>Баланс</Link></li>
                 </ul>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li onClick={logoutHandler}><a href="/">Выход</a></li>
+                    <li onClick={logoutHandler}><Link to="/">Выход</Link></li>
                 </ul>
             </div>
         </nav>

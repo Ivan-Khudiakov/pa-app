@@ -8,11 +8,10 @@ export const App = () => {
 
     const [isLogin, setIsLogin] = useState(false)
 
-    const history = useHistory()
+    // const history = useHistory()
 
     const logoutHandler = () => {
         setIsLogin(false)
-        history.push("/pa-app")
     }
 
     return (
