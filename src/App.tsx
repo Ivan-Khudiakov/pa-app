@@ -19,7 +19,7 @@ export const App = () => {
         <div className="App">
             {isLogin
                 ? <PersonalAccount logoutHandler={logoutHandler}/>
-                : <Route path="/" render={() => <LoginPage setIsLogin={setIsLogin}/>}/>
+                : <Route path="/pa-app" render={() => <LoginPage setIsLogin={setIsLogin}/>}/>
             }
         </div>
     )
