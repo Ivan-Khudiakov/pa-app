@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from "react"
 import styles from "./LoginPage.module.css"
 
 type PropsType = {
-    setIsLogin: (val: boolean) => void
+    handleLogin: () => void
 }
 
 export type FormType = {
@@ -10,7 +10,7 @@ export type FormType = {
     password: string
 }
 
-export const LoginPage: React.FC<PropsType> = ({setIsLogin}) => {
+export const LoginPage: React.FC<PropsType> = ({handleLogin}) => {
 
     const [form, setForm] = useState({
         email: '',
@@ -28,7 +28,7 @@ export const LoginPage: React.FC<PropsType> = ({setIsLogin}) => {
         } else if (form.password !== "123123") {
             setError("Вы ввели неверный пароль!")
         } else {
-            setIsLogin(true)
+            handleLogin()
         }
     }
 

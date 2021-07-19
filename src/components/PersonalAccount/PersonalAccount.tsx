@@ -24,11 +24,9 @@ export const PersonalAccount: React.FC<PropsType>  = ({logoutHandler}) => {
     return (
         <>
             <Navbar logoutHandler={logoutHandler}/>
-            <div className="app-content">
                 <Route exact path="/" render={() => <ProfilePage/>}/>
                 <Route path="/callhistory" render={() => <CallHistoryPage/>}/>
                 <Route path="/balance" render={() => <BalancePage/>}/>
-            </div>
         </>
     )
 }
