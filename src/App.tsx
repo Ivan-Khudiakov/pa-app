@@ -12,7 +12,7 @@ export const App = () => {
 
     const logoutHandler = () => {
         setIsLogin(false)
-        history.push("/")
+        history.push("/pa-app")
     }
 
     return (
