@@ -1,0 +1,9 @@
+.callContainer {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.callContainer h2 {
+    display: flex;
+    justify-content: center;
+}

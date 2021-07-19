@@ -1,0 +1,30 @@
+.profileContainer {
+    margin: 0 auto;
+    width: 700px;
+
+}
+
+.profile {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+}
+
+.avatar {
+    width: 250px;
+    padding-right: 50px;
+}
+
+.profileName {
+    display: flex;
+    justify-content: center;
+}
+
+.profileInfo {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+

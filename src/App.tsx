@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import {Route, useHistory} from "react-router-dom"
+import {LoginPage} from "./components/LoginPage/LoginPage"
+import {PersonalAccount} from "./components/PersonalAccount/PersonalAccount"
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+
+    const [isLogin, setIsLogin] = useState(false)
+
+    const history = useHistory()
+
+    const logoutHandler = () => {
+        setIsLogin(false)
+        history.push("/")
+    }
+
+    return (
+        <div className="App">
+            {isLogin
+                ? <PersonalAccount logoutHandler={logoutHandler}/>
+                : <Route path="/" render={() => <LoginPage setIsLogin={setIsLogin}/>}/>
+            }
+        </div>
+    )
 }
 
-export default App;

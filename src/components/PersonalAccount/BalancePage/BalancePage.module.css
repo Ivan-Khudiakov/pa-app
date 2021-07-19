@@ -1,0 +1,9 @@
+.balanceContainer {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.balanceContainer h2 {
+    display: flex;
+    justify-content: center;
+}
