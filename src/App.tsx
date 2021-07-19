@@ -1,21 +1,19 @@
 import React, {useEffect, useState} from "react"
-import {Route, useHistory, Redirect} from "react-router-dom"
+import {Route, useHistory} from "react-router-dom"
 import {LoginPage} from "./components/LoginPage/LoginPage"
-import {PersonalAccount} from "./components/PersonalAccount/PersonalAccount"
+import {ProfilePage} from "./components/PersonalAccount/ProfilePage/ProfilePage"
+import {CallHistoryPage} from "./components/PersonalAccount/CallHistoryPage/CallHistoryPage"
+import {BalancePage} from "./components/PersonalAccount/BalancePage/BalancePage"
+import {Navbar} from "./components/PersonalAccount/Navbar/Navbar"
+import {useDispatch} from "react-redux"
+import {getProfile} from "./redux/profile-reducer"
 import "./App.css"
-import {ProfilePage} from "./components/PersonalAccount/ProfilePage/ProfilePage";
-import {CallHistoryPage} from "./components/PersonalAccount/CallHistoryPage/CallHistoryPage";
-import {BalancePage} from "./components/PersonalAccount/BalancePage/BalancePage";
-import {Navbar} from "./components/PersonalAccount/Navbar/Navbar";
-import {useDispatch} from "react-redux";
-import {getProfile} from "./redux/profile-reducer";
 
 export const App = () => {
 
     const [isLogin, setIsLogin] = useState(false)
 
     const history = useHistory()
-
 
     const dispatch = useDispatch()
 
